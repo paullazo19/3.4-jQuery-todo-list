@@ -1,0 +1,173 @@
+// Form
+
+.todo__heading
+  font-size: 10rem
+  font-family: $todos__font
+  font-weight: 100
+  color: $color__rose
+  text-align: center
+  margin-bottom: 2rem
+  letter-spacing: -0.25rem
+
+.todo__form
+  width: 80%
+  margin: 0 auto
+  font-size: 0
+  box-shadow: 0rem 0.125rem 0.25rem $color__textgraymid
+
+.todo__placeholder
+  width: 100%
+  display: block
+  position: relative
+  background-color: $color__white
+  font-size: $fontSize--base
+  margin: 0
+
+.fa-angle-down
+  width: 5%
+  font-size: 0
+  color: $color__textgraylight
+  margin: 0
+  display: inline-block
+  padding-left: 1.5rem
+  padding-top: 1.125rem
+  padding-bottom: 1rem
+  border-bottom: $border__bottom
+
+.todo__input
+  width: 95%
+  font-size: 3rem
+  font-family: $todos__font
+  font-weight: 300
+  background-color: $color__white
+  margin: 0
+  display: inline-block
+  float: right
+  padding-top: 0.5rem
+  padding-bottom: 0.5rem
+  padding-left: 3rem
+  border-bottom: $border__bottom
+
+input
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  cursor: pointer
+
+input:active
+  outline: none
+  border: none
+
+input:focus
+  outline: none
+
+
+input::-webkit-input-placeholder
+  color: $color__textgraydark
+
+input::-moz-placeholder
+  color: $color__textgraydark
+
+input:-ms-input-placeholder
+  color: $color__textgraydark
+
+input:-moz-placeholder
+  color: $color__textgraydark
+
+// placeholder reference
+// http://blog.teamtreehouse.com/the-css3-placeholder-pseudo-element
+
+///////////////////// LIST /////////////////////////////
+
+.todo__list
+  height: 10rem
+  background-color: $color__white
+  border-bottom: $border__bottom
+
+//////////////////////// FOOTER ////////////////////////
+
+.todo__footer
+  background-color: $color__white
+  margin: 0
+  padding: 0
+  font-size: 0
+
+.footer__left
+  width: 25%
+  position: relative
+  display: inline-block
+  background-color: $color__white
+  margin: 0
+  font-size: 0
+  padding-left: 1.5rem
+  letter-spacing: 0.0625rem
+  font-weight: 100
+  color: $color__textgraymid
+  font-family: $todos__font
+
+.footer__middle
+  width: 50%
+  position: relative
+  display: inline-block
+  background-color: $color__white
+  margin: 0
+  font-size: 0
+  letter-spacing: 0.0625rem
+  font-weight: 100
+  color: $color__textgraymid
+  font-family: $todos__font
+  text-align: center
+
+.footer__right
+  width: 25%
+  position: relative
+  display: inline-block
+  background-color: $color__white
+  margin: 0
+  font-size: 0
+  padding-right: 1.5rem
+  letter-spacing: 0.0625rem
+  font-weight: 100
+  color: $color__textgraymid
+  font-family: $todos__font
+  text-align: right
+
+h5
+  font-size: $fontSize--base
+
+
+//
+// .footer__middle
+//   width: 50%
+//   letter-spacing: 0.0625rem
+//   display: inline-block
+//   position: relative
+//   font-weight: 100
+//   color: $color__textgraymid
+//   font-family: $todos__font
+//   text-align: center
+//   margin: 0
+//
+// .footer__right
+//   width: 25%
+//   margin: 0
+//   padding-right: 1.5rem
+//   letter-spacing: 0.0625rem
+//   background-color: $color__white
+//   display: inline-block
+//   position: relative
+//   font-weight: 100
+//   color: $color__textgraymid
+//   font-family: $todos__font
+//   background-color: red
+//   text-align: right
+
+.border__active
+  border: 1px solid $color__textgraylight
+  border-radius: 0.25rem
+
+.item__view
+  display: inline-block
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem
+  margin: 0.5rem
+  text-transform: capitalize
