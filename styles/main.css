@@ -80,18 +80,20 @@ footer {
 
 .todo__heading {
   font-size: 10rem;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Helvetica Neue", serif;
   font-weight: 100;
   color: #ecdede;
-  text-align: center;
-  margin-bottom: 2rem;
-  letter-spacing: -0.25rem; }
+  text-align: center; }
 
 .todo__form {
+  min-width: 50rem;
   width: 80%;
   margin: 0 auto;
   font-size: 0;
   box-shadow: 0rem 0.125rem 0.25rem #b3b3b3; }
+
+.todo__list {
+  font-size: 1.4rem; }
 
 .todo__placeholder {
   width: 100%;
@@ -99,7 +101,8 @@ footer {
   position: relative;
   background-color: white;
   font-size: 1.4rem;
-  margin: 0; }
+  margin: 0;
+  cursor: pointer; }
 
 .fa-angle-down {
   width: 5%;
@@ -109,14 +112,15 @@ footer {
   display: inline-block;
   padding-left: 1.5rem;
   padding-top: 1.125rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.75rem;
   border-bottom: 2px solid #f2f2f2; }
 
 .todo__input {
   width: 95%;
   font-size: 3rem;
-  font-family: "Yantramanav", sans-serif;
-  font-weight: 300;
+  font-family: "Helvetica Neue", serif;
+  font-weight: 200;
+  color: #646464;
   background-color: white;
   margin: 0;
   display: inline-block;
@@ -124,7 +128,8 @@ footer {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 3rem;
-  border-bottom: 2px solid #f2f2f2; }
+  border-bottom: 2px solid #f2f2f2;
+  cursor: text; }
 
 input {
   -webkit-appearance: none;
@@ -156,6 +161,27 @@ input:-moz-placeholder {
   background-color: white;
   border-bottom: 2px solid #f2f2f2; }
 
+.todo__item {
+  font-size: 2rem;
+  font-family: "Helvetica Neue", serif;
+  color: #646464;
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  display: inline-block;
+  margin-left: 1rem;
+  margin-top: 1rem; }
+
+.item__marker {
+  color: white;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 2rem;
+  border: 2px solid #f2f2f2;
+  display: inline-block;
+  position: relative;
+  margin-top: 2rem; }
+
 .todo__footer {
   background-color: white;
   margin: 0;
@@ -170,10 +196,8 @@ input:-moz-placeholder {
   margin: 0;
   font-size: 0;
   padding-left: 1.5rem;
-  letter-spacing: 0.0625rem;
-  font-weight: 100;
   color: #b3b3b3;
-  font-family: "Yantramanav", sans-serif; }
+  font-family: "Helvetica Neue", serif; }
 
 .footer__middle {
   width: 50%;
@@ -182,10 +206,8 @@ input:-moz-placeholder {
   background-color: white;
   margin: 0;
   font-size: 0;
-  letter-spacing: 0.0625rem;
-  font-weight: 100;
   color: #b3b3b3;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Helvetica Neue", serif;
   text-align: center; }
 
 .footer__right {
@@ -196,24 +218,38 @@ input:-moz-placeholder {
   margin: 0;
   font-size: 0;
   padding-right: 1.5rem;
-  letter-spacing: 0.0625rem;
-  font-weight: 100;
   color: #b3b3b3;
-  font-family: "Yantramanav", sans-serif;
+  font-family: "Helvetica Neue", serif;
   text-align: right; }
 
-h5 {
-  font-size: 1.4rem; }
+footer h5 {
+  font-size: 1.4rem;
+  font-weight: 200;
+  letter-spacing: 0.0625rem;
+  color: #b3b3b3; }
 
 .border__active {
   border: 1px solid #e4e4e4;
   border-radius: 0.25rem; }
 
+.item__count {
+  cursor: pointer; }
+
 .item__view {
   display: inline-block;
   padding: 0.25rem 0.75rem 0.25rem 0.75rem;
   margin: 0.5rem;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  cursor: pointer; }
+
+.item__clearCompleted {
+  cursor: pointer; }
+
+.disclaimer {
+  padding-top: 2rem;
+  color: #b3b3b3;
+  text-align: center;
+  display: block; }
 
 /*!
  *  Font Awesome 4.6.1 by @davegandy - http://fontawesome.io - @fontawesome
