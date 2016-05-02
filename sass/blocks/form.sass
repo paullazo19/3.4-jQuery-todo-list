@@ -1,0 +1,207 @@
+// Form
+
+.todo__heading
+  font-size: 10rem
+  font-family: $todos__font
+  font-weight: 100
+  color: $color__rose
+  text-align: center
+
+.todo__form
+  min-width: 50rem
+  width: 80%
+  margin: 0 auto
+  font-size: 0
+  box-shadow: 0rem 0.125rem 0.25rem $color__textgraymid
+  background-color: $color__white
+
+.todo__list
+  font-size: $fontSize--base
+
+.todo__placeholder
+  width: 100%
+  display: block
+  position: relative
+  font-size: $fontSize--base
+  margin: 0
+  cursor: pointer
+  border-bottom: $border__bottom--2px
+
+.fa-angle-down
+  width: 5%
+  font-size: 0
+  color: $color__textgraylight
+  background-color: none
+  margin: 0
+  display: inline-block
+  position: relative
+  padding-left: 1.5rem
+  padding-top: 1.125rem
+  padding-bottom: 0.75rem
+
+.todo__input
+  width: 95%
+  display: inline-block
+  position: relative
+  font-size: 3rem
+  font-family: $todos__font
+  font-weight: 200
+  color: $color__textgraydark
+  background-color: rgba(0, 0, 0, 0)
+  margin: 0
+  display: inline-block
+  float: right
+  padding-top: 0.5rem
+  padding-bottom: 0.5rem
+  padding-left: 3rem
+  cursor: text
+
+input
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  cursor: pointer
+
+input:active
+  outline: none
+  border: none
+
+input:focus
+  outline: none
+
+
+input::-webkit-input-placeholder
+  color: $color__textgraydark
+
+input::-moz-placeholder
+  color: $color__textgraydark
+
+input:-ms-input-placeholder
+  color: $color__textgraydark
+
+input:-moz-placeholder
+  color: $color__textgraydark
+
+// placeholder reference
+// http://blog.teamtreehouse.com/the-css3-placeholder-pseudo-element
+
+///////////////////// LIST /////////////////////////////
+
+.todo__list
+  min-height: 10rem
+  // background-color: $color__white
+  // border-bottom: $border__bottom
+  position: relative
+
+.todo__item
+  font-size: 2rem
+  font-family: $todos__font
+  color: $color__textgraydark
+  cursor: pointer
+  text-decoration: none
+  list-style: none
+  display: block
+  position: relative
+  padding-top: 1rem
+  padding-bottom: 1rem
+  border-bottom: $border__bottom--1px
+
+.fa-check
+  height: 3rem
+  width: 3rem
+  border-radius: 2rem
+  display: inline-block
+  position: relative
+  border: $border__bottom--1px
+  margin-left: 1rem
+  vertical-align: baseline
+  margin-right: 1.5rem
+  padding-top: 0.5rem
+  font-size: $fontSize--base
+  color: $color__white
+
+.item__completed--text
+  color: $color__textgraylight
+  text-decoration: line-through
+
+.item__completed--icon
+  color: $color__green
+  border: 1px solid $color__green
+
+
+//////////////////////// FOOTER ////////////////////////
+
+.todo__footer
+  background-color: $color__white
+  margin: 0
+  padding: 0
+  font-size: 0
+  position: relative
+  border-top: $border__bottom--1px
+
+.footer__left
+  width: 25%
+  position: relative
+  display: inline-block
+  background-color: $color__white
+  margin: 0
+  font-size: 0
+  padding-left: 1.5rem
+  color: $color__textgraymid
+  font-family: $todos__font
+
+.footer__middle
+  width: 50%
+  position: relative
+  display: inline-block
+  background-color: $color__white
+  margin: 0
+  font-size: 0
+  color: $color__textgraymid
+  font-family: $todos__font
+  text-align: center
+
+.footer__right
+  width: 25%
+  position: relative
+  display: inline-block
+  background-color: $color__white
+  margin: 0
+  font-size: 0
+  padding-right: 1.5rem
+  color: $color__textgraymid
+  font-family: $todos__font
+  text-align: right
+
+footer h5
+  font-size: $fontSize--base
+  font-weight: 200
+  letter-spacing: 0.0625rem
+  color: $color__textgraymid
+
+.border__active
+  border: 1px solid $color__textgraylight
+  border-radius: 0.25rem
+
+.item__count
+  cursor: pointer
+
+.item__view
+  display: inline-block
+  padding: 0.25rem 0.75rem 0.25rem 0.75rem
+  margin: 0.5rem
+  text-transform: capitalize
+  cursor: pointer
+
+.item__clearCompleted
+  cursor: pointer
+
+.disclaimer
+  padding-top: 2rem
+  color: $color__textgraymid
+  text-align: center
+  display: block
+
+.highlight
+  // box-shadow: 0rem 0rem 1rem $color__green
+  color: $color__green
