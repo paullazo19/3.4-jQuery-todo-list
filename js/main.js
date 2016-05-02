@@ -5,6 +5,7 @@ $(function(){
   var $todoForm = $("[data-js='todo_form']");
   var $todoLog = $("[data-js='todo_log']");
   var $itemCount = $("[data-js='item_counter']");
+  var $todoIcon = $("[data-js='todo_icon']");
   var $selectedItem = [];
 
 
@@ -25,7 +26,7 @@ $(function(){
       $todoLog.prepend(`
 
           <li class="todo__item" data-js="todo_item">
-            <span class="item__marker"></span>
+            <i class="fa fa-check fa-lg" aria-hidden="true" data-js="todo_icon"></i>
             ${$elText.val()}
           </li>
       `);
@@ -40,11 +41,23 @@ $(function(){
 
       var $todoItem = $("[data-js='todo_item']");
 
-      $todoItem.on("click", function(e){
-        $selectedItem = $(e.target);
-      });
     }
-  })
+
+    var $todoIcon = $("[data-js='todo_icon']");
+    $todoLog.on("click","i", function(e){
+      $(e.target).toggleClass("item__completed--icon");
+      // $(e.target.this).toggleClass("item__completed--text");
+      console.log(e.target);
+    });
+
+    var $todoItem = $("[data-js='todo_item']");
+    $todoLog.on("click","i", function(e){
+      // $(e.target).toggleClass("item__completed--icon");
+      $(e.target).parent().toggleClass("item__completed--text");
+      console.log(e.target);
+    });
+
+  });
 
   // number of how many items are left in the todo list
   // delete a todo when selected with one click and press the delete key
@@ -64,7 +77,14 @@ $(function(){
           $itemCount.html($count);
         }
       });
+      var $todoItem = $("[data-js='todo_item']");
+      $todoItem.on("click", function(e){
+        $selectedItem = $(e.target);
+        $selectedItem.toggleClass("highlight");
+
+      });
     }
 
   });
+
 });

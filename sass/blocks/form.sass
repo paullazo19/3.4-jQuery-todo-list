@@ -13,6 +13,7 @@
   margin: 0 auto
   font-size: 0
   box-shadow: 0rem 0.125rem 0.25rem $color__textgraymid
+  background-color: $color__white
 
 .todo__list
   font-size: $fontSize--base
@@ -21,36 +22,38 @@
   width: 100%
   display: block
   position: relative
-  background-color: $color__white
   font-size: $fontSize--base
   margin: 0
   cursor: pointer
+  border-bottom: $border__bottom--2px
 
 .fa-angle-down
   width: 5%
   font-size: 0
   color: $color__textgraylight
+  background-color: none
   margin: 0
   display: inline-block
+  position: relative
   padding-left: 1.5rem
   padding-top: 1.125rem
   padding-bottom: 0.75rem
-  border-bottom: $border__bottom
 
 .todo__input
   width: 95%
+  display: inline-block
+  position: relative
   font-size: 3rem
   font-family: $todos__font
   font-weight: 200
   color: $color__textgraydark
-  background-color: $color__white
+  background-color: rgba(0, 0, 0, 0)
   margin: 0
   display: inline-block
   float: right
   padding-top: 0.5rem
   padding-bottom: 0.5rem
   padding-left: 3rem
-  border-bottom: $border__bottom
   cursor: text
 
 input
@@ -85,9 +88,10 @@ input:-moz-placeholder
 ///////////////////// LIST /////////////////////////////
 
 .todo__list
-  height: 10rem
-  background-color: $color__white
-  border-bottom: $border__bottom
+  min-height: 10rem
+  // background-color: $color__white
+  // border-bottom: $border__bottom
+  position: relative
 
 .todo__item
   font-size: 2rem
@@ -96,21 +100,34 @@ input:-moz-placeholder
   cursor: pointer
   text-decoration: none
   list-style: none
-  display: inline-block
-  margin-left: 1rem
-  margin-top: 1rem
+  display: block
+  position: relative
+  padding-top: 1rem
+  padding-bottom: 1rem
+  border-bottom: $border__bottom--1px
 
-
-
-.item__marker
-  color: $color__white
+.fa-check
   height: 3rem
   width: 3rem
   border-radius: 2rem
-  border: $border__bottom
   display: inline-block
   position: relative
-  margin-top: 2rem
+  border: $border__bottom--1px
+  margin-left: 1rem
+  vertical-align: baseline
+  margin-right: 1.5rem
+  padding-top: 0.5rem
+  font-size: $fontSize--base
+  color: $color__white
+
+.item__completed--text
+  color: $color__textgraylight
+  text-decoration: line-through
+
+.item__completed--icon
+  color: $color__green
+  border: 1px solid $color__green
+
 
 //////////////////////// FOOTER ////////////////////////
 
@@ -119,6 +136,8 @@ input:-moz-placeholder
   margin: 0
   padding: 0
   font-size: 0
+  position: relative
+  border-top: $border__bottom--1px
 
 .footer__left
   width: 25%
@@ -182,3 +201,7 @@ footer h5
   color: $color__textgraymid
   text-align: center
   display: block
+
+.highlight
+  // box-shadow: 0rem 0rem 1rem $color__green
+  color: $color__green
