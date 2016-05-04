@@ -7,12 +7,8 @@ var $todoLog = $("[data-js='todo_log']"),
     $selectedItem = [];
 
 this.logPrepend = function(textVal){
-  $todoLog.prepend(`
-      <li class="todo__item" data-js="todo_item">
-        <i class="fa fa-check fa-lg" aria-hidden="true" data-js="todo_icon"></i>
-        ${textVal}
-      </li>
-  `);
+
+  $todoLog.prepend($("<li class= 'todo__item' data-js='todo_item'><i class='fa fa-check fa-lg' aria-hidden='true' data-js='todo_icon'></li>").text(textVal));
   }
 
 
