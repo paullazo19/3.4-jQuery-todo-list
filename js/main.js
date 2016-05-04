@@ -2,13 +2,15 @@ var $ = require("jquery");
 var item = require("item");
 var list = require("list");
 
+
+// variables
 var $todoInput = $("[data-js='todo_input']"),
     $todoForm = $("[data-js='todo_form']"),
     $todoLog = $("[data-js='todo_log']"),
     $itemCount = $("[data-js='item_counter']"),
     $todoIcon = $("[data-js='todo_icon']"),
     $selectedItem = [];
-    // $elText = $(e.target);
+
 
 $(function(){
 
@@ -33,31 +35,19 @@ $(function(){
       $elText.val("");
 
       var $todoItem = $("[data-js='todo_item']");
-
       var $count = $todoLog.children().length;
+      var $todoItem = $("[data-js='todo_item']");
 
-          var $todoItem = $("[data-js='todo_item']");
-          $todoItem.on("click", function(e){
-            $selectedItem = $(e.target);
-            $selectedItem.toggleClass("highlight");
-
-          });
-        }
-      });
-
-    item.countItem();
-
-
-    var $todoIcon = $("[data-js='todo_icon']");
-
-    $todoLog.on("click","i", function(e){
-      $(e.target).toggleClass("item__completed--icon");
-    });
-
-    var $todoItem = $("[data-js='todo_item']");
-
-    $todoLog.on("click","i", function(e){
-      $(e.target).parent().toggleClass("item__completed--text");
-    });
-
+    }
   });
+
+  list.deleteItem();
+
+  list.countItem();
+
+  var $todoIcon = $("[data-js='todo_icon']");
+  var $todoItem = $("[data-js='todo_item']");
+
+  item.completeItem();
+
+});

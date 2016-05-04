@@ -1,16 +1,41 @@
 var $ = require("jquery");
 
-  console.log("This is the delete");
+//variables
+var $todoInput = $("[data-js='todo_input']");
+var $todoLog = $("[data-js='todo_log']");
+var $itemCount = $("[data-js='item_counter']");
 
-  //variables
-  var $todoInput = $("[data-js='todo_input']");
-  var $todoLog = $("[data-js='todo_log']");
-  // var $itemCount = $("[data-js='item_counter']");
-  // var $todoIcon = $("[data-js='todo_icon']");
-  // var $selectedItem = [];
+this.deleteItem = function(){
 
-  // number of how many items are left in the todo list
-  // delete a todo when selected with one click and press the delete key
+  $todoLog.on("click", "[data-js='todo_item']", function(e){
 
+    $selectedItem = $(e.target);
+    $selectedItem.toggleClass("highlight");
 
-  
+    var $body = $("[data-js='body']");
+
+    $body.on("keyup", function(e){
+
+      if (e.keyCode === 8 && $selectedItem.length > 0) {
+        $selectedItem.remove();
+        var $count = $todoLog.children().length;
+        $itemCount.html($count);
+      }
+    });
+
+  });
+}
+
+this.countItem = function(){
+
+  $todoInput.on("keyup", function(e){
+    var $itemCount = $("[data-js='item_counter']");
+    if (e.keyCode === 13) {
+
+      var $count = $todoLog.children().length;
+
+      $itemCount.html($count);
+
+    }
+  });
+}
