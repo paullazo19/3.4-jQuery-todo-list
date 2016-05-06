@@ -9,8 +9,8 @@ var $todoLog = $("[data-js='todo_log']"),
 
 this.logPrepend = function(textVal){
 
-  $todoLog.prepend($("<li class= 'todo__item' data-js='todo_item'><i class='fa fa-check fa-lg' aria-hidden='true' data-js='todo_icon'></li>").text(textVal));
-  }
+  $todoLog.prepend($("<li class= 'todo__item' data-js='todo_item'><i class='fa fa-check fa-lg' aria-hidden='true' data-js='todo_icon'></i>" + textVal + "</li>"));
+}
 
 
 this.completeItem = function(){
