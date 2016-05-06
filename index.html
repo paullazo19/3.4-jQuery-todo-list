@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Your todo list</title>
+    <link rel="stylesheet" href="styles/main.css" charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Yantramanav:400,300,100' rel='stylesheet' type='text/css'>
+  </head>
+  <body data-js="body">
+    <header>
+      <h1 class="todo__heading">todos</h1>
+    </header>
+    <main>
+      <form class="todo__form" action="index.html" method="post" data-js="todo_form">
+        <span class="todo__placeholder">
+          <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+          <input class="todo__input" type="text" name="name" value="" data-js="todo_input" placeholder="type todo item here" autocomplete="off">
+        </span>
+
+        <ul class="todo__list" data-js="todo_log">
+
+        </ul>
+
+        <footer class="todo__footer">
+          <span class="footer__left">
+            <h5 class="item__count">
+              <span data-js="item_counter">0</span>&nbsp;item<span data-js="togglePlural">s</span>&nbsp;left
+            </h5>
+          </span>
+
+          <span class="footer__middle">
+            <h5 class="item__view border__active" data-js="item__view--all">all</h5>
+            <h5 class="item__view border__active" data-js="item__view--active">active</h5>
+            <h5 class="item__view border__active" data-js="item__view--all">completed</h5>
+          </span>
+
+          <span class="footer__right">
+            <h5 class="item__clearCompleted">Clear completed</h5>
+          </span>
+        </footer>
+      </form>
+    </main>
+    <span class="disclaimer">Double click to edit a todo</span>
+  </body>
+  <script type="text/javascript" src="js/bundle.js"></script>
+</html>
